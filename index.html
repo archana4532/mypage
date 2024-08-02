@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archana Pulikunta - Portfolio</title>
+    <style>
+        /* Critical Inline CSS */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .header-container {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 24px;
+            height: 18px;
+            cursor: pointer;
+        }
+        .hamburger-menu .line {
+            width: 100%;
+            height: 3px;
+            background-color: #fff;
+        }
+        .hero {
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            color: #fff;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 18px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #2c3e50;
+                text-align: center;
+            }
+            .nav-links.show {
+                display: flex;
+            }
+            .nav-links a {
+                padding: 15px;
+                border-top: 1px solid #34495e;
+            }
+            .hamburger-menu {
+                display: flex;
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .btn {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="logo">Archana's Portfolio</div>
+        <nav class="navbar">
+            <button class="hamburger-menu" aria-label="Toggle menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Hello, I'm Archana Reddy</h1>
+            <p>A passionate and innovative computer science student in my final year at Madanapalle Institute of Technology & Science.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section id="about" class="section about-section">
+        <div class="content-container">
+            <h2>About Me</h2>
+            <p>My journey in tech has been both exciting and rewarding. I love solving complex problems, and with hands-on experience in developing projects and a solid foundation in programming, I continually strive to enhance my skill set through various certifications and internships. Whether it’s building software solutions, exploring the latest tech trends, or engaging in collaborative projects, I’m eager to take on new challenges that push me to grow and excel.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills-section" style="background-color: #f9f9f9;">
+        <div class="content-container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div>
+                    <h3>Java</h3>
+                    <p>Experienced in developing programs using java.</p>
+                </div>
+                <div>
+                    <h3>Python</h3>
+                    <p>Proficient in scripting and developing applications.</p>
+                </div>
+                <div>
+                    <h3>React</h3>
+                    <p>Novoice in building dynamic user interfaces.</p>
+                </div>
+                <div>
+                    <h3>Django</h3>
+                    <p>Experienced in developing robust web applications.</p>
+                </div>
+                <div>
+                    <h3>HTML/CSS</h3>
+                    <p>Expert in creating responsive and visually appealing layouts.</p>
+                </div>
+                <div>
+                    <h3>Git</h3>
+                    <p>Proficient in version control and collaborative development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects-section" style="background-color: #f0f4f7;">
+        <div class="content-container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div>
+                    <h3>Automating Billing System Using Django</h3>
+                    <p>Developed a billing system for small to medium-scale businesses to automate invoicing and payments.</p>
+                </div>
+                <div>
+                    <h3>Gesture Controlled App Using OpenCV</h3>
+                    <p>Built an application that uses computer vision to control functionalities based on hand gestures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="content-container">
+            <h2>Contact</h2>
+            <p>Get in touch with me.</p>
+            <div class="social-links">
+                <a href="mailto:pulikuntaarchana453@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/archana-reddy-8a2a042a6" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/archana4532" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <!-- Add more social links as needed -->
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2024 Archana Pulikunta. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>
